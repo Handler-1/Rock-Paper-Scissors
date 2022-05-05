@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #e2e8f0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+}
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 4em;
+}
+
+.buttons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+#rock {
+    border: 1px solid #900;
+    font-weight: bold;
+    width: 200px;
+    height: auto;
+}
+
+#paper {
+    border: 1px solid #900;
+    font-weight: bold;
+    width: 200px;
+    height: auto;
+}
+
+#scissors {
+    border: 1px solid #900;
+    font-weight: bold;
+    width: 200px;
+    height: auto;
+}
+
+.buttons > button {
+    cursor: pointer;
+  }
