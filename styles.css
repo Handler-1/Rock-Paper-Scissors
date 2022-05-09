@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,7 +10,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5em;
+    font-family: 'Macondo', cursive;
+    color: #FF9671;
+    font-size: 3em;
+    padding: 32px;
 }
 
 .rules {
@@ -16,6 +21,48 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+.prompt {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 32px;
+}
+
+.promptTwo {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+#scoreInfo {
+    margin-top: 32px;
+    font-size: 16px;
+}
+
+.sign {
+    font-size: 80px;
+}
+
+.playerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3182ce;
+}
+
+.computerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c53030;
+}
+
+#playerScore, #computerScore {
+    padding-left: 4px;
+    height: 18px;
 }
 
 .scores {
@@ -23,7 +70,10 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 48px;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
 }
 
 .buttons {
@@ -34,26 +84,83 @@ h1 {
 }
 
 #rock {
-    border: 1px solid #900;
-    font-weight: bold;
+    border: none;
+    border-color: #e2e8f0;
     width: 200px;
     height: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#rock:hover {
+    background: #B1BDC5;
+}
+#rock:focus {
+    background: -internal-light-dark(black, white);
 }
 
 #paper {
-    border: 1px solid #900;
-    font-weight: bold;
+    border: none;
+    border-color: #e2e8f0;
     width: 200px;
     height: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#paper:hover {
+    background: #B1BDC5;
+}
+#paper:focus {
+    background: -internal-light-dark(black, white);
 }
 
 #scissors {
-    border: 1px solid #900;
-    font-weight: bold;
+    border: none;
+    border-color: #e2e8f0;
     width: 200px;
     height: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#scissors:hover {
+    background: #B1BDC5;
+}
+#scissors:focus {
+    background: -internal-light-dark(black, white);
 }
 
 .buttons > button {
     cursor: pointer;
   }
+
+.resetBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+}
+
+#reset {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+#reset:hover {
+    background: linear-gradient(to bottom right, #ff0544, #ff6505);
+}
