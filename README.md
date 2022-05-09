@@ -1,9 +1,5 @@
 # Rock-Paper-Scissors
 
+First project using HTML.
 
-Will randomly return once of the choices at random:
-
-function computerPlay() {
-    let choices = ["rock", "paper", "scissors"];
-    return choices[Math.floor(Math.length * Math.random())];
-} 
+This is a simple Rock-Paper-Scissors game where winner is determined by reaching 5 points total.
