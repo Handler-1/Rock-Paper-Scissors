@@ -14,30 +14,31 @@
 
     <main>
         <div class="rules">
-            <p>Which do you choose?</p>
-            <p id="scoreInfo"></p>
+            <p class="prompt">Choose your poison</p>
+            <p class="promptTwo">First to 5 wins!</p>
+            <p id="scoreInfo">Waiting for move...</p>
         </div>
         
         <div class="scores">
             <div id="player">
-                <div class="sign" id="playerSign">❔</div>
-                <p>
+                <div class="sign" id="playerSign">❓</div>
+                <p class="playerText">
                     Player: <span id="playerScore">0</span>
                 </p>
             </div>
 
             <div id="computer">
-                <div class="sign" id="computerSign">❔</div>
-                <p>
+                <div class="sign" id="computerSign">❓</div>
+                <p class="computerText">
                     Computer: <span id="computerScore">0</span>
                 </p>
             </div>
         </div>
 
         <div class="buttons">
-            <button class="playerChoice" id="rock" type="submit" value="rock"><img src="./images/rock.svg" alt="rock"></button>
-            <button class="playerChoice" id="paper" type="submit" value="paper"><img src="./images/paper.svg" alt="paper"></button>
-            <button class="playerChoice" id="scissors" type="submit" value="scissors"><img src="./images/scissors.svg" alt="scissors"></button>
+            <button class="playerChoice" id="rock" type="submit" value="rock"><img src="./images/rock.png" alt="rock"></button>
+            <button class="playerChoice" id="paper" type="submit" value="paper"><img src="./images/paper.png" alt="paper"></button>
+            <button class="playerChoice" id="scissors" type="submit" value="scissors"><img src="./images/scissors.png" alt="scissors"></button>
         </div>
 
         <div class="resetBtn">
