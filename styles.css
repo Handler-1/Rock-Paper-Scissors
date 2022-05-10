@@ -158,14 +158,18 @@ h1 {
 @media screen and (max-width: 725px) {
     header {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         justify-content: center;
         align-items: center;
+        height: 100px;
     }
 
     h1 {
-        grid-column-start: 2;
-        grid-column-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
     }
 
     .rules {
@@ -187,7 +191,7 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 4px;
+        gap: 8px;
         width: 100%;
         height: 100%;
     }
@@ -202,4 +206,35 @@ h1 {
         height: auto;
     }
 
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    h1 {
+        grid-column-start: 1;
+        grid-column-end: 8;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+    
+    .sign {
+         font-size: 50px;
+    }
+    
+    #rock, #paper, #scissors {
+        width: 110px;
+        height: 150px;
+    }
+
+    .resetBtn {
+        margin-top: 32px;
+    }
 }
