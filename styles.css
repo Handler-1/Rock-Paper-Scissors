@@ -6,10 +6,13 @@ html, body {
     background-color: #e2e8f0;
 }
 
-h1 {
+header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
     font-family: 'Macondo', cursive;
     color: #FF9671;
     font-size: 3em;
@@ -43,6 +46,9 @@ h1 {
 }
 
 .sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 80px;
 }
 
@@ -66,14 +72,23 @@ h1 {
 }
 
 .scores {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
     gap: 48px;
     margin-bottom: 2em;
     font-weight: bold;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
+}
+
+#player {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+#computer {
+    grid-column-start: 5;
+    grid-column-end: 6;
 }
 
 .buttons {
@@ -83,48 +98,17 @@ h1 {
     gap: 64px;
 }
 
-#rock {
+#rock, #paper, #scissors {
     border: none;
     border-color: #e2e8f0;
-    width: 200px;
-    height: auto;
+    max-width: 100%;
+    height: 150px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
-#rock:hover {
-    background: #B1BDC5;
+#rock:hover, #paper:hover, #scissors:hover {
+    background: #1d1e1f;
 }
-#rock:focus {
-    background: -internal-light-dark(black, white);
-}
-
-#paper {
-    border: none;
-    border-color: #e2e8f0;
-    width: 200px;
-    height: auto;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-#paper:hover {
-    background: #B1BDC5;
-}
-#paper:focus {
-    background: -internal-light-dark(black, white);
-}
-
-#scissors {
-    border: none;
-    border-color: #e2e8f0;
-    width: 200px;
-    height: auto;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-#scissors:hover {
-    background: #B1BDC5;
-}
-#scissors:focus {
+#rock:focus, #paper:focus, #scissors:focus {
     background: -internal-light-dark(black, white);
 }
 
@@ -150,8 +134,8 @@ h1 {
     font-size: 16px;
     font-weight: 500;
     line-height: 2.5;
-    outline: transparent;
-    padding: 1em 2em;
+    outline: transparent solid 2px;
+    padding: 1em 3em;
     text-align: center;
     text-decoration: none;
     transition: box-shadow .2s ease-in-out;
@@ -163,4 +147,59 @@ h1 {
 
 #reset:hover {
     background: linear-gradient(to bottom right, #ff0544, #ff6505);
+}
+
+#reset:focus {
+    border: 2px solid black;
+}
+
+/* media queries */
+
+@media screen and (max-width: 725px) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        grid-column-start: 2;
+        grid-column-end: 7;
+    }
+
+    .rules {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+    }
+    
+    .scores {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #rock, #paper, #scissors {
+        height: 150px;
+        width: 120px;
+    }
+
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+
 }
